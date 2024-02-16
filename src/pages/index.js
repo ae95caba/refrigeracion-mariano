@@ -18,7 +18,15 @@ import Member1 from "../images/GatsbyImages/Member1"
 import Member2 from "../images/GatsbyImages/Member2"
 import Member3 from "../images/GatsbyImages/Member3"
 import Member4 from "../images/GatsbyImages/Member4"
-import { Samsung, LG, BGH, Surrey, Sanyo } from "../images/GatsbyImages/Brands"
+import {
+  Samsung,
+  LG,
+  BGH,
+  Surrey,
+  Sanyo,
+  Philco,
+  Noblex,
+} from "../images/GatsbyImages/Brands"
 import Lottie, { LottieRefCurrentProps } from "lottie-react"
 import animationData from "../animations/contact-me.json"
 import trophy from "../images/trophy.svg"
@@ -205,7 +213,8 @@ const IndexPage = () => {
             slidesToShow={3}
             fade={false}
           >
-            <Samsung /> <Surrey /> <LG /> <BGH /> <Sanyo />
+            <Samsung /> <Surrey /> <LG /> <BGH /> <Sanyo /> <Philco />{" "}
+            <Noblex />
           </SimpleSlider>
         </div>
       </Section>

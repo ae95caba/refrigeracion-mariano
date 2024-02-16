@@ -43,3 +43,23 @@ export function Sanyo() {
     />
   )
 }
+
+export function Noblex() {
+  return (
+    <StaticImage
+      src="../brands/noblex.jpg"
+      alt="abogado"
+      placeholder="blurred"
+    />
+  )
+}
+
+export function Philco() {
+  return (
+    <StaticImage
+      src="../brands/philco.jpg"
+      alt="abogado"
+      placeholder="blurred"
+    />
+  )
+}
