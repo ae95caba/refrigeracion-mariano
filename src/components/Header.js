@@ -2,7 +2,7 @@ import React from "react"
 import { ReactSVG } from "react-svg"
 import { Link } from "gatsby"
 import { useContext, useRef } from "react"
-import Logo from "./Logo"
+import Logo from "../images/GatsbyImages/Logo"
 import balance from "../images/balance.svg"
 import animationData from "../animations/hamburger-menu.json"
 import Lottie from "lottie-react"
@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header>
       <div className="content">
-        <Logo elementType={"h1"} />
+        <Logo />
 
         <div className="container">
           <nav>

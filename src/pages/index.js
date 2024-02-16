@@ -18,6 +18,7 @@ import Member1 from "../images/GatsbyImages/Member1"
 import Member2 from "../images/GatsbyImages/Member2"
 import Member3 from "../images/GatsbyImages/Member3"
 import Member4 from "../images/GatsbyImages/Member4"
+import { Samsung, LG, BGH, Surrey, Sanyo } from "../images/GatsbyImages/Brands"
 import Lottie, { LottieRefCurrentProps } from "lottie-react"
 import animationData from "../animations/contact-me.json"
 import trophy from "../images/trophy.svg"
@@ -61,24 +62,19 @@ let members = [
 ]
 
 let services = {
-  laboral: [
-    "Accidentes de trabajo",
-    "Despidos",
-    "Trabajo en negro",
-    "Acoso laboral",
-    "Diferencias laborales",
-    "Moratorias",
+  "Reparación y Mantenimiento": [
+    "Diagnóstico y solución de problemas técnicos",
+    "Programas de mantenimiento preventivo",
+    "Instalación y actualización de sistemas",
+    "Optimización de eficiencia energética",
+    "Asesoramiento en la selección de equipos",
   ],
-  penal: [
-    "Delitos dolosos",
-    "Ley de estupefacientes",
-
-    "Robos",
-    "Portacion de armas",
-    "Secuestros",
-    "Lesiones",
-    "Allanamientos",
-    "Morigeracion de condenas",
+  "Atención a Emergencias": [
+    "Servicio 24/7 para situaciones críticas",
+    "Respuesta inmediata en casos de averías urgentes",
+    "Asistencia prioritaria para problemas imprevistos",
+    "Soluciones rápidas para restaurar el funcionamiento",
+    "Coordinación eficiente con seguros y garantías",
   ],
 }
 
@@ -89,13 +85,13 @@ const IndexPage = () => {
     <main id="home">
       <Section className="hero" enableBackgroundDiv={true}>
         <div className="container first">
-          <h3>SERVICIO LEGAL DE EXCELENCIA</h3>
+          <h3>SERVICIO TECNICO DE EXCELENCIA</h3>
           <h2>
             Deja que nuestra experiencia
             <span> sea tu guía</span>
           </h2>
           <p>
-            Responsabilidad y eficacia, orientada a la resolución de conflictos
+            Responsabilidad y eficacia, orientada a la resolución de problemas
             en el menor tiempo posible.
           </p>
           <button>Reservar una cita</button>
@@ -113,13 +109,13 @@ const IndexPage = () => {
       <Section className="achievements">
         <Counter
           value={300}
-          text={"Casos ganados"}
+          text={"Aires instalados"}
           duration={4}
           icon={<ReactSVG src={trophy} />}
         />
         <Counter
           value={400}
-          text={"Cargos desestimados"}
+          text={"Aires reparados"}
           duration={5}
           icon={<ReactSVG src={judge} />}
         />
@@ -136,19 +132,19 @@ const IndexPage = () => {
           <h2>Somos tu mejor elección</h2>
         </div>
         <p>
-          Nuestro estudio se compone de un equipo de cuatro profesionales
-          altamente especializados en las áreas laboral y penal. Con una sólida
-          trayectoria y valores fundamentales centrados en la ética y la
-          transparencia, nos comprometemos a brindar a nuestros clientes una
-          representación legal excepcional. Nuestro enfoque personalizado,
-          combinado con experiencia probada, nos distingue en la resolución
-          exitosa de casos y la defensa efectiva de los derechos de nuestros
-          clientes.
+          Nuestro equipo está formado por cuatro profesionales altamente
+          capacitados en el campo de la climatización. Con una sólida
+          experiencia y valores arraigados en la eficiencia y la confiabilidad,
+          nos comprometemos a ofrecer a nuestros clientes un servicio de
+          reparación excepcional para sus sistemas de aire acondicionado.
+          Nuestro enfoque personalizado, respaldado por una amplia experiencia,
+          nos destaca en la solución efectiva de problemas y la garantía del
+          óptimo funcionamiento de los equipos de nuestros clientes.
         </p>
       </Section>
 
       <Section className={"services"} id={"areas-de-practica"}>
-        <h2>Areas de practica</h2>
+        <h2>Nuestros servicios</h2>
         {Object.keys(services).map(category => (
           <div className="container">
             <h3>{category}</h3>
@@ -209,10 +205,7 @@ const IndexPage = () => {
             slidesToShow={3}
             fade={false}
           >
-            <Member1 /> <Member1 />
-            <Member2 /> <Member2 />
-            <Member3 />
-            <Member4 /> <Member3 />
+            <Samsung /> <Surrey /> <LG /> <BGH /> <Sanyo />
           </SimpleSlider>
         </div>
       </Section>
@@ -268,7 +261,7 @@ const IndexPage = () => {
         </form>
       </Section>
       <Section className="call-to-action">
-        <p>Contactanos ahora! Haz una consulta gratuita para tu caso.</p>
+        <p>Contactanos ahora! Haz una consulta gratuita.</p>
         <button>Reserva una cita</button>
       </Section>
     </main>

@@ -5,7 +5,7 @@ export default function Tabs() {
     <>
       <Link to={`/#nosotros`} /* activeClassName="active" */>Nosotros</Link>
       <Link to={`/#areas-de-practica`} /* activeClassName="active" */>
-        Areas de practica
+        Nuestros servicios
       </Link>
       <Link to={`/#nuestro-equipo`} /* activeClassName="active" */>
         Nuestro Equipo

@@ -5,7 +5,7 @@ import React from "react"
 export default function Logo() {
   return (
     <StaticImage
-      src="../gatsby-icon.png"
+      src="../logo.png"
       alt="Logo"
       placeholder="blurred"
       className="logo"

@@ -8,7 +8,7 @@ import twitter from "../images/twitter.svg"
 import instagram from "../images/instagram.svg"
 import facebook from "../images/facebook.svg"
 import whatsapp from "../images/whatsapp.svg"
-import Logo from "./Logo"
+import Logo from "../images/GatsbyImages/Logo"
 import Tabs from "./Tabs"
 const social = {
   instagram: { url: "https://www.instagram.com/", icon: instagram },
@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
           )}
           <div className="extra">
-            <Logo elementType={"p"} />
+            <Logo />
             <nav>
               <Tabs />
             </nav>
@@ -76,7 +76,7 @@ export default function Footer() {
         )}
 
         <p className="copyright">
-          Copyright © 2023 | JM & Asociados por
+          Copyright © 2023 | REFRIGERACION MARIANO por
           <a href="https://andreespinozadev.netlify.app/"> Andre Espinoza</a>
         </p>
       </div>
