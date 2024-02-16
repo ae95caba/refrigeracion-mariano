@@ -310,6 +310,7 @@ function Counter({ value, duration, text, icon }) {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+
+export const Head = () => <Seo title="Refrigeración Mariano" />
 
 export default IndexPage
