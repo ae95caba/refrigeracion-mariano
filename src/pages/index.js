@@ -19,36 +19,17 @@ import {
   Philco,
   Noblex,
 } from "../images/GatsbyImages/Brands"
-import Lottie, { LottieRefCurrentProps } from "lottie-react"
+import Lottie from "lottie-react"
 import animationData from "../animations/contact-me.json"
 import trophy from "../images/trophy.svg"
 import judge from "../images/judge.svg"
 import users from "../images/users.svg"
-import checkmark from "../images/checkmark.svg"
+import Services from "../components/Sections/Services"
 import { ReactSVG } from "react-svg"
 import user from "../images/user.svg"
 import email from "../images/email.svg"
 import feather from "../images/feather.svg"
 import SimpleSlider from "../components/SlickCarousel"
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-let services = {
-  "Reparación y Mantenimiento": [
-    "Diagnóstico y solución de problemas técnicos",
-    "Programas de mantenimiento preventivo",
-    "Instalación y actualización de sistemas",
-    "Optimización de eficiencia energética",
-    "Asesoramiento en la selección de equipos",
-  ],
-  "Atención a Emergencias": [
-    "Servicio 24/7 para situaciones críticas",
-    "Respuesta inmediata en casos de averías urgentes",
-    "Asistencia prioritaria para problemas imprevistos",
-    "Soluciones rápidas para restaurar el funcionamiento",
-    "Coordinación eficiente con seguros y garantías",
-  ],
-}
 
 const IndexPage = () => {
   const contactMeAnimationRef = useRef(null)
@@ -115,24 +96,12 @@ const IndexPage = () => {
         </p>
       </Section>
 
-      <Section className={"services"} id={"areas-de-practica"}>
-        <h2>Nuestros servicios</h2>
-        {Object.keys(services).map(category => (
-          <div className="container">
-            <h3>{category}</h3>
-            <ul key={category}>
-              {services[category].map((service, index) => (
-                <li key={service}>
-                  <ReactSVG src={checkmark} />
-                  {service}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </Section>
+      <Services />
       <Team />
       <Section className="gallery">
+        <h2>
+          Marcas <br /> <span>con las que trabajamos</span>
+        </h2>
         <div className="container">
           <SimpleSlider
             speed={1000}
@@ -140,7 +109,7 @@ const IndexPage = () => {
             slidesToShow={3}
             fade={false}
           >
-            <Samsung /> <Surrey /> <LG /> <BGH /> <Sanyo /> <Philco />{" "}
+            <Samsung /> <Surrey /> <LG /> <BGH /> <Sanyo /> <Philco />
             <Noblex />
           </SimpleSlider>
         </div>

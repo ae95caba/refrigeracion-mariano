@@ -75,6 +75,14 @@ section.gallery {
   padding-left: 0rem;
   padding-right: 0rem;
   .content {
+    h2 {
+      margin-bottom: 2rem;
+      line-height: 1.5rem;
+      text-align: center;
+      span {
+        font-size: 1.2rem;
+      }
+    }
     .container {
       margin: auto;
       overflow-x: clip;
