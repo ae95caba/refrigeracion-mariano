@@ -1,23 +1,15 @@
 import * as React from "react"
 import { useState, useRef, useEffect } from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+
 import "./index.scss"
 import CountUp from "react-countup"
 import { useInView } from "react-intersection-observer"
 
-import linkedin from "../images/linkedin.svg"
-import twitter from "../images/twitter.svg"
-import instagram from "../images/instagram.svg"
-import facebook from "../images/facebook.svg"
 import Hero from "../images/GatsbyImages/Hero"
 import About from "../images/GatsbyImages/About"
 import Seo from "../components/seo"
 import Section from "../components/Section"
-import Member1 from "../images/GatsbyImages/Member1"
-import Member2 from "../images/GatsbyImages/Member2"
-import Member3 from "../images/GatsbyImages/Member3"
-import Member4 from "../images/GatsbyImages/Member4"
+import Team from "../components/Sections/Team"
 import {
   Samsung,
   LG,
@@ -40,34 +32,6 @@ import feather from "../images/feather.svg"
 import SimpleSlider from "../components/SlickCarousel"
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-let members = [
-  {
-    name: "Pablo Lopez",
-    position: "Abogado líder",
-    image: <Member1 />,
-    linkedin: "linkedin/another-person",
-    links: { facebook: "asdfasdf", twitter: "fasfa", instagram: "asf" },
-  },
-  {
-    name: "Franco Garcia",
-    position: "Abogado asistente",
-    image: <Member2 />,
-    links: { linkedin: "linkedin/another-person" },
-  },
-  {
-    name: "Fernanda Perez",
-    position: "Secretaria",
-    image: <Member3 />,
-    links: { linkedin: "linkedin/another-person", facebook: "fasdfa" },
-  },
-  {
-    name: "Juan Russo",
-    position: "Abogado asistente",
-    image: <Member4 />,
-    links: { linkedin: "linkedin/another-person", twitter: "fasdfa" },
-  },
-]
 
 let services = {
   "Reparación y Mantenimiento": [
@@ -167,44 +131,7 @@ const IndexPage = () => {
           </div>
         ))}
       </Section>
-      <Section className={"team"} id="nuestro-equipo">
-        <h2>Nuestro Equipo</h2>
-        <ul>
-          {members.map(member => (
-            <li className="member" key="member.name">
-              <div className="container">
-                {member.image}
-                {member.links && Object.keys(member.links).length > 0 && (
-                  <div className="links">
-                    {member.links.linkedin && (
-                      <a href={member.links.linkedin}>
-                        <img src={linkedin} />
-                      </a>
-                    )}
-                    {member.links.facebook && (
-                      <a href={member.links.facebook}>
-                        <img src={facebook} />
-                      </a>
-                    )}
-                    {member.links.twitter && (
-                      <a href={member.links.twitter}>
-                        <img src={twitter} />
-                      </a>
-                    )}
-                    {member.links.instagram && (
-                      <a href={member.links.instagram}>
-                        <img src={instagram} />
-                      </a>
-                    )}
-                  </div>
-                )}
-              </div>
-              <p>{member.name}</p>
-              <p>{member.position}</p>
-            </li>
-          ))}
-        </ul>
-      </Section>
+      <Team />
       <Section className="gallery">
         <div className="container">
           <SimpleSlider
