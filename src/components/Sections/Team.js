@@ -1,9 +1,9 @@
 import React from "react"
 import { Ema, Guille, Ricardo, Fer } from "../../images/GatsbyImages/Team"
-import linkedin from "../../images/linkedin.svg"
-import twitter from "../../images/twitter.svg"
-import instagram from "../../images/instagram.svg"
-import facebook from "../../images/facebook.svg"
+import linkedin from "../../images/social/linkedin.svg"
+import twitter from "../../images/social/twitter.svg"
+import instagram from "../../images/social/instagram.svg"
+import facebook from "../../images/social/facebook.svg"
 import Section from "../Section"
 
 export default function Team() {

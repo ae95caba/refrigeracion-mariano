@@ -1,9 +1,8 @@
 import React from "react"
-import { ReactSVG } from "react-svg"
-import { Link } from "gatsby"
+
 import { useContext, useRef } from "react"
 import Logo from "../images/GatsbyImages/Logo"
-import balance from "../images/balance.svg"
+
 import animationData from "../animations/hamburger-menu.json"
 import Lottie from "lottie-react"
 import Tabs from "./Tabs"

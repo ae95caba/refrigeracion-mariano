@@ -6,7 +6,7 @@ import CountUp from "react-countup"
 import { useInView } from "react-intersection-observer"
 
 import Hero from "../images/GatsbyImages/Hero"
-import About from "../images/GatsbyImages/About"
+
 import Seo from "../components/seo"
 import Section from "../components/Section"
 import Team from "../components/Sections/Team"
