@@ -12,8 +12,11 @@ module.exports = {
     description: `Refrigeración y construcción en general, en zona oeste.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    copyright: `Copyright © 2024 | REFRIGERACION MARIANO`,
   },
   plugins: [
+    "gatsby-transformer-remark",
+
     "gatsby-plugin-sass",
     `gatsby-plugin-image`,
     {
@@ -27,6 +30,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     `gatsby-transformer-sharp`,

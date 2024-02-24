@@ -10,6 +10,7 @@ import facebook from "../images/social/facebook.svg"
 import whatsapp from "../images/social/whatsapp.svg"
 import Logo from "../images/GatsbyImages/Logo"
 import Tabs from "./Tabs"
+import { graphql, useStaticQuery } from "gatsby"
 const social = {
   instagram: { url: "https://www.instagram.com/", icon: instagram },
   facebook: { url: "https://www.facebook.com/", icon: facebook },
@@ -33,6 +34,17 @@ const contact = {
 }
 
 export default function Footer() {
+  const data = useStaticQuery(graphql`
+    query SiteInfo {
+      site {
+        siteMetadata {
+          copyright
+        }
+      }
+    }
+  `)
+
+  const { copyright } = data.site.siteMetadata
   return (
     <footer>
       <div className="content">
@@ -76,7 +88,7 @@ export default function Footer() {
         )}
 
         <p className="copyright">
-          Copyright © 2023 | REFRIGERACION MARIANO por
+          {copyright} por
           <a href="https://andreespinozadev.netlify.app/"> Andre Espinoza</a>
         </p>
       </div>
