@@ -15,6 +15,7 @@ module.exports = {
     copyright: `Copyright © 2024 | REFRIGERACION MARIANO`,
   },
   plugins: [
+    "gatsby-transformer-json",
     "gatsby-transformer-remark",
 
     "gatsby-plugin-sass",
