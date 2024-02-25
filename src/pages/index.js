@@ -30,6 +30,7 @@ import user from "../images/user.svg"
 import email from "../images/email.svg"
 import feather from "../images/feather.svg"
 import SimpleSlider from "../components/SlickCarousel"
+import About from "../components/Sections/About"
 
 const IndexPage = () => {
   const contactMeAnimationRef = useRef(null)
@@ -79,22 +80,7 @@ const IndexPage = () => {
           icon={<ReactSVG src={users} />}
         />
       </Section>
-      <Section className={"about"} id="nosotros">
-        <div className="container">
-          <h3>Nosotros</h3>
-          <h2>Somos tu mejor elección</h2>
-        </div>
-        <p>
-          Nuestro equipo está formado por cuatro profesionales altamente
-          capacitados en el campo de la climatización. Con una sólida
-          experiencia y valores arraigados en la eficiencia y la confiabilidad,
-          nos comprometemos a ofrecer a nuestros clientes un servicio de
-          reparación excepcional para sus sistemas de aire acondicionado.
-          Nuestro enfoque personalizado, respaldado por una amplia experiencia,
-          nos destaca en la solución efectiva de problemas y la garantía del
-          óptimo funcionamiento de los equipos de nuestros clientes.
-        </p>
-      </Section>
+      <About />
 
       <Services />
       <Team />
