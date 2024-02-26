@@ -28,6 +28,7 @@ import feather from "../images/feather.svg"
 import SimpleSlider from "../components/SlickCarousel"
 import About from "../components/Sections/About"
 import Achievements from "../components/Sections/Achievements"
+import Gallery from "../components/Sections/Gallery"
 
 const IndexPage = () => {
   const contactMeAnimationRef = useRef(null)
@@ -62,22 +63,7 @@ const IndexPage = () => {
 
       <Services />
       <Team />
-      <Section className="gallery">
-        <h2>
-          Marcas <br /> <span>con las que trabajamos</span>
-        </h2>
-        <div className="container">
-          <SimpleSlider
-            speed={1000}
-            autoplaySpeed={3500}
-            slidesToShow={3}
-            fade={false}
-          >
-            <Samsung /> <Surrey /> <LG /> <BGH /> <Sanyo /> <Philco />
-            <Noblex />
-          </SimpleSlider>
-        </div>
-      </Section>
+      <Gallery />
       <Section className={"email"} id="contactanos">
         <div className="container">
           <h2>Contactanos</h2>
