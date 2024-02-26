@@ -2,10 +2,26 @@ import React, { useEffect } from "react"
 import Section from "../Section"
 import { ReactSVG } from "react-svg"
 import CountUp from "react-countup"
+import { graphql, useStaticQuery } from "gatsby"
 import { useInView } from "react-intersection-observer"
-import achievementsData from "../../data/achievements.json"
 
 export default function Achievements() {
+  const data = useStaticQuery(graphql`
+    query {
+      achievements: allAchievementsJson {
+        nodes {
+          image {
+            publicURL
+          }
+          duration
+          text
+          value
+        }
+      }
+    }
+  `)
+  console.log(`ach data isss ${JSON.stringify(data)}`)
+  const achievementsData = data.achievements.nodes
   return (
     <Section className="achievements">
       {achievementsData.map(achievement => (
@@ -13,7 +29,7 @@ export default function Achievements() {
           value={achievement.value}
           text={achievement.text}
           duration={achievement.duration}
-          icon={<ReactSVG src={achievement.image} />}
+          icon={<ReactSVG src={achievement.image.publicURL} />}
         />
       ))}
     </Section>
