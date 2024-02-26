@@ -1,9 +1,7 @@
 import * as React from "react"
-import { useState, useRef, useEffect } from "react"
+import { useRef } from "react"
 
 import "./index.scss"
-import CountUp from "react-countup"
-import { useInView } from "react-intersection-observer"
 
 import Hero from "../images/GatsbyImages/Hero"
 
@@ -21,9 +19,7 @@ import {
 } from "../images/GatsbyImages/Brands"
 import Lottie from "lottie-react"
 import animationData from "../animations/contact-me.json"
-import trophy from "../images/trophy.svg"
-import judge from "../images/judge.svg"
-import users from "../images/users.svg"
+
 import Services from "../components/Sections/Services"
 import { ReactSVG } from "react-svg"
 import user from "../images/user.svg"
@@ -31,6 +27,7 @@ import email from "../images/email.svg"
 import feather from "../images/feather.svg"
 import SimpleSlider from "../components/SlickCarousel"
 import About from "../components/Sections/About"
+import Achievements from "../components/Sections/Achievements"
 
 const IndexPage = () => {
   const contactMeAnimationRef = useRef(null)
@@ -60,26 +57,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Section>
-      <Section className="achievements">
-        <Counter
-          value={300}
-          text={"Aires instalados"}
-          duration={4}
-          icon={<ReactSVG src={trophy} />}
-        />
-        <Counter
-          value={400}
-          text={"Aires reparados"}
-          duration={5}
-          icon={<ReactSVG src={judge} />}
-        />
-        <Counter
-          value={1000}
-          text={"Clientes satisfechos"}
-          duration={6}
-          icon={<ReactSVG src={users} />}
-        />
-      </Section>
+      <Achievements />
       <About />
 
       <Services />
@@ -156,34 +134,6 @@ const IndexPage = () => {
         <button>Reserva una cita</button>
       </Section>
     </main>
-  )
-}
-
-function Counter({ value, duration, text, icon }) {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 1,
-    triggerOnce: true,
-  })
-
-  useEffect(() => {
-    if (inView) {
-      console.log("in view")
-    }
-  }, [inView])
-  return (
-    <div className="container" ref={ref}>
-      {icon}
-      <p>
-        {inView ? (
-          <CountUp end={value} duration={duration} start={0} delay={0.5} />
-        ) : (
-          <span>0</span>
-        )}
-        <br />
-        {text}
-      </p>
-    </div>
   )
 }
 

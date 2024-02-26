@@ -1,0 +1,20 @@
+[
+  {
+    "value": 300,
+    "image": "/static/1d9dfe13dbd39266c8ca7fa64cd2ffce/air-conditioner.svg",
+    "text": "Aires instalados",
+    "duration": 4
+  },
+  {
+    "value": 500,
+    "image": "static/f3e0eda791a9446672024b93d520980b/tools.svg",
+    "text": "Aires reparados",
+    "duration": 5
+  },
+  {
+    "value": 1000,
+    "image": "static/449ac06655ef75f841962436df2d8f64/users.svg",
+    "text": "Clientes satisfechos",
+    "duration": 6
+  }
+]

@@ -38,6 +38,7 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data`,
+        extensions: [".json"],
       },
     },
     `gatsby-transformer-sharp`,
