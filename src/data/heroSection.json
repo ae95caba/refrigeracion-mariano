@@ -4,7 +4,10 @@
     "h2": "Deja que nuestra experiencia sea tu guía",
     "motto": "Responsabilidad y eficacia, orientada a la resolución de problemas en el menor tiempo posible.",
     "button": "Reservar una cita",
-    "years": 25,
+    "years": {
+      "number": 25,
+      "description": " Años de experiencia en el campo"
+    },
     "image": "../images/heroSection/hero.jpg"
   }
 ]

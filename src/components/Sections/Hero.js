@@ -11,7 +11,10 @@ export default function Hero() {
         h2
         h3
         motto
-        years
+        years {
+          description
+          number
+        }
         image {
           childImageSharp {
             gatsbyImageData
@@ -35,8 +38,8 @@ export default function Hero() {
         <GatsbyImage image={image} />
         <div className="years">
           <p>
-            <span>{heroData.years}</span> <br />
-            Años de experiencia en el campo
+            <span>{heroData.years.number}</span> <br />
+            {heroData.years.description}
           </p>
         </div>
       </div>

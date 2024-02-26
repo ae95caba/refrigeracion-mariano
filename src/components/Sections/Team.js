@@ -10,19 +10,22 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 export default function Team() {
   const data = useStaticQuery(graphql`
     query {
-      team: allTeamSectionJson {
-        nodes {
-          name
-          position
-          links {
-            facebook
-            instagram
-            linkedin
-            twitter
-          }
-          image {
-            childrenImageSharp {
-              gatsbyImageData
+      team: file(relativePath: { eq: "teamSection.json" }) {
+        childDataJson {
+          title
+          team {
+            image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            position
+            name
+            links {
+              facebook
+              instagram
+              linkedin
+              twitter
             }
           }
         }
@@ -30,16 +33,15 @@ export default function Team() {
     }
   `)
 
-  const teamData = data.team.nodes
+  const teamData = data.team.childDataJson.team
+  console.log(teamData)
 
   return (
     <Section className={"team"} id="nuestro-equipo">
       <h2>Nuestro Equipo</h2>
       <ul>
         {teamData.map(member => {
-          const image = getImage(
-            member.image.childrenImageSharp[0].gatsbyImageData
-          )
+          const image = getImage(member.image.childImageSharp.gatsbyImageData)
 
           return (
             <li className="member" key="member.name">

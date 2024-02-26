@@ -1,0 +1,26 @@
+{
+  "title": "Marcas con las que trabajamos",
+  "images": [
+    { "path": "../images/gallerySection/lg.jpg", "alt": "Logo de la marca LG" },
+    {
+      "path": "../images/gallerySection/noblex.jpg",
+      "alt": "Logo de la marca Noblex"
+    },
+    {
+      "path": "../images/gallerySection/philco.jpg",
+      "alt": "Logo de la marca Philco"
+    },
+    {
+      "path": "../images/gallerySection/sanyo.png",
+      "alt": "Logo de la marca Sanyo"
+    },
+    {
+      "path": "../images/gallerySection/samsung.jpg",
+      "alt": "Logo de la marca Samsung"
+    },
+    {
+      "path": "../images/gallerySection/surrey.jpg",
+      "alt": "Logo de la marca Surrey"
+    }
+  ]
+}

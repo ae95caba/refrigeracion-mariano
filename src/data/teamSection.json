@@ -1,30 +1,33 @@
-[
-  {
-    "name": "Emanuel Lopez",
-    "position": "Ayudante Instalador",
-    "image": "../images/teamSection/ema.jpg",
-    "links": {
-      "facebook": "asdfasdf",
-      "twitter": "fasfa",
-      "instagram": "asf"
+{
+  "title": "Nuestro equipo",
+  "team": [
+    {
+      "name": "Emanuel Lopez",
+      "position": "Ayudante Instalador",
+      "image": "../images/teamSection/ema.jpg",
+      "links": {
+        "facebook": "asdfasdf",
+        "twitter": "fasfa",
+        "instagram": "asf"
+      }
+    },
+    {
+      "name": "Guillermo Garcia",
+      "position": "Ayudante en construccion",
+      "image": "../images/teamSection/guille.jpg",
+      "links": { "linkedin": "linkedin/another-person" }
+    },
+    {
+      "name": "Fernando Perez",
+      "position": "Maestro de obras",
+      "image": "../images/teamSection/fer.jpg",
+      "links": { "linkedin": "linkedin/another-person", "facebook": "fasdfa" }
+    },
+    {
+      "name": "Ricardo Russo",
+      "position": "Tecnico en reparaciones",
+      "image": "../images/teamSection/ricardo.jpg",
+      "links": { "linkedin": "linkedin/another-person", "twitter": "fasdfa" }
     }
-  },
-  {
-    "name": "Guillermo Garcia",
-    "position": "Ayudante en construccion",
-    "image": "../images/teamSection/guille.jpg",
-    "links": { "linkedin": "linkedin/another-person" }
-  },
-  {
-    "name": "Fernando Perez",
-    "position": "Maestro de obras",
-    "image": "../images/teamSection/fer.jpg",
-    "links": { "linkedin": "linkedin/another-person", "facebook": "fasdfa" }
-  },
-  {
-    "name": "Ricardo Russo",
-    "position": "Tecnico en reparaciones",
-    "image": "../images/teamSection/ricardo.jpg",
-    "links": { "linkedin": "linkedin/another-person", "twitter": "fasdfa" }
-  }
-]
+  ]
+}

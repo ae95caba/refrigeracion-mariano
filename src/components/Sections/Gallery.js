@@ -5,30 +5,30 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
 export default function Gallery() {
   const data = useStaticQuery(graphql`
-    {
-      gallery: allFile(
-        filter: {
-          relativePath: { glob: "**/gallerySection/**/*.{jpg, jpeg, png, gif}" }
-          extension: { in: ["jpg", "jpeg", "png", "gif"] }
-        }
-      ) {
-        nodes {
-          childrenImageSharp {
-            gatsbyImageData
+    query MyQuery {
+      gallery: file(relativePath: { eq: "gallerySection.json" }) {
+        childDataJson {
+          images {
+            alt
+            path {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
+          title
         }
       }
     }
   `)
-  console.log(data.gallery.nodes)
 
-  const galleryData = data.gallery.nodes
-
+  const galleryData = data.gallery.childDataJson.images
   return (
     <Section className="gallery">
-      <h2>
-        Marcas <br /> <span>con las que trabajamos</span>
-      </h2>
+      {data.gallery.childDataJson.title && (
+        <h2>{data.gallery.childDataJson.title}</h2>
+      )}
+
       <div className="container">
         <SimpleSlider
           speed={1000}
@@ -36,11 +36,12 @@ export default function Gallery() {
           slidesToShow={3}
           fade={false}
         >
-          {galleryData.map(element => {
-            const image = getImage(
-              element.childrenImageSharp[0].gatsbyImageData
+          {galleryData.map(image => {
+            return (
+              <GatsbyImage
+                image={getImage(image.path.childImageSharp.gatsbyImageData)}
+              />
             )
-            return <GatsbyImage image={image} />
           })}
         </SimpleSlider>
       </div>
