@@ -8,31 +8,15 @@ import Hero from "../images/GatsbyImages/Hero"
 import Seo from "../components/seo"
 import Section from "../components/Section"
 import Team from "../components/Sections/Team"
-import {
-  Samsung,
-  LG,
-  BGH,
-  Surrey,
-  Sanyo,
-  Philco,
-  Noblex,
-} from "../images/GatsbyImages/Brands"
-import Lottie from "lottie-react"
-import animationData from "../animations/contact-me.json"
 
 import Services from "../components/Sections/Services"
-import { ReactSVG } from "react-svg"
-import user from "../images/user.svg"
-import email from "../images/email.svg"
-import feather from "../images/feather.svg"
-import SimpleSlider from "../components/SlickCarousel"
+
 import About from "../components/Sections/About"
 import Achievements from "../components/Sections/Achievements"
 import Gallery from "../components/Sections/Gallery"
+import Contact from "../components/Sections/Contact"
 
 const IndexPage = () => {
-  const contactMeAnimationRef = useRef(null)
-
   return (
     <main id="home">
       <Section className="hero" enableBackgroundDiv={true}>
@@ -64,57 +48,7 @@ const IndexPage = () => {
       <Services />
       <Team />
       <Gallery />
-      <Section className={"email"} id="contactanos">
-        <div className="container">
-          <h2>Contactanos</h2>
-          <Lottie
-            className="animation"
-            lottieRef={contactMeAnimationRef}
-            animationData={animationData}
-            autoplay={true}
-            loop={true}
-          />
-        </div>
-        <form action="https://formsubmit.co/ae95caba@gmail.com" method="POST">
-          <legend>Aclararemos todas tus dudas.</legend>
-
-          <label htmlFor="email">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-            <ReactSVG src={email} />
-          </label>
-          <label htmlFor="name">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Nombre"
-              required
-            />
-            <ReactSVG src={user} />
-          </label>
-          <input
-            type="hidden"
-            name="_next"
-            value="http://localhost:8000/"
-          ></input>
-          <label htmlFor="message">
-            <textarea
-              name="message"
-              required
-              id="message"
-              placeholder="Escribe tu mensaje"
-            ></textarea>
-            <ReactSVG src={feather} />
-          </label>
-          <button>Enviar</button>
-        </form>
-      </Section>
+      <Contact />
       <Section className="call-to-action">
         <p>Contactanos ahora! Haz una consulta gratuita.</p>
         <button>Reserva una cita</button>

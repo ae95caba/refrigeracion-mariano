@@ -8,7 +8,7 @@ export default function Gallery() {
     {
       gallery: allFile(
         filter: {
-          relativePath: { glob: "**/gallery/**/*.{jpg, jpeg, png, gif}" }
+          relativePath: { glob: "**/gallerySection/**/*.{jpg, jpeg, png, gif}" }
           extension: { in: ["jpg", "jpeg", "png", "gif"] }
         }
       ) {

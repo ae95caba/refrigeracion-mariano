@@ -2,7 +2,7 @@
   {
     "name": "Emanuel Lopez",
     "position": "Ayudante Instalador",
-    "image": "../images/team/ema.jpg",
+    "image": "../images/teamSection/ema.jpg",
     "links": {
       "facebook": "asdfasdf",
       "twitter": "fasfa",
@@ -12,19 +12,19 @@
   {
     "name": "Guillermo Garcia",
     "position": "Ayudante en construccion",
-    "image": "../images/team/guille.jpg",
+    "image": "../images/teamSection/guille.jpg",
     "links": { "linkedin": "linkedin/another-person" }
   },
   {
     "name": "Fernando Perez",
     "position": "Maestro de obras",
-    "image": "../images/team/fer.jpg",
+    "image": "../images/teamSection/fer.jpg",
     "links": { "linkedin": "linkedin/another-person", "facebook": "fasdfa" }
   },
   {
     "name": "Ricardo Russo",
     "position": "Tecnico en reparaciones",
-    "image": "../images/team/ricardo.jpg",
+    "image": "../images/teamSection/ricardo.jpg",
     "links": { "linkedin": "linkedin/another-person", "twitter": "fasdfa" }
   }
 ]
