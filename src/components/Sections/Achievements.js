@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer"
 export default function Achievements() {
   const data = useStaticQuery(graphql`
     query {
-      achievements: allAchievementsJson {
+      achievements: allAchievementsSectionJson {
         nodes {
           image {
             publicURL
@@ -20,7 +20,7 @@ export default function Achievements() {
       }
     }
   `)
-  console.log(`ach data isss ${JSON.stringify(data)}`)
+
   const achievementsData = data.achievements.nodes
   return (
     <Section className="achievements">

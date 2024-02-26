@@ -9,8 +9,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 export default function Team() {
   const data = useStaticQuery(graphql`
-    query team {
-      allTeamJson {
+    query {
+      team: allTeamSectionJson {
         nodes {
           name
           position
@@ -30,7 +30,7 @@ export default function Team() {
     }
   `)
 
-  const teamData = data.allTeamJson.nodes
+  const teamData = data.team.nodes
 
   return (
     <Section className={"team"} id="nuestro-equipo">

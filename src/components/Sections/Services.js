@@ -2,7 +2,7 @@ import React from "react"
 import Section from "../Section"
 import { ReactSVG } from "react-svg"
 import checkmark from "../../images/checkmark.svg"
-import servicesData from "../../data/services.json"
+import servicesData from "../../data/servicesSection.json"
 
 export default function Services() {
   return (

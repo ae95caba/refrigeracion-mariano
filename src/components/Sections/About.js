@@ -1,6 +1,6 @@
 import React from "react"
 import Section from "../Section"
-import aboutData from "../../data/about.json"
+import aboutData from "../../data/aboutSection.json"
 export default function About() {
   return (
     <Section className={"about"} id="nosotros">
