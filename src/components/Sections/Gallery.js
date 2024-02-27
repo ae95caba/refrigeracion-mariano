@@ -39,7 +39,7 @@ export default function Gallery() {
             /*    console.log(galleryData.length)
             console.log(`my img is ${JSON.stringify(image)}`) */
             //this ? fixes deployment on netlify
-            const img = getImage(image.path.childImageSharp.gatsbyImageData)
+            const img = getImage(image.path?.childImageSharp.gatsbyImageData)
 
             return <GatsbyImage image={img} alt={image.alt} />
           })}
