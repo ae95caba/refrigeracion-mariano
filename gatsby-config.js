@@ -10,7 +10,10 @@
 module.exports = {
   siteMetadata: {
     description: `Refrigeración y construcción en general, en zona oeste.`,
-    author: `@gatsbyjs`,
+    author: {
+      name: `André Espinoza`,
+      portfolio: `https://andreespinozadev.netlify.app/`,
+    },
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     copyright: `Copyright © 2024 | REFRIGERACION MARIANO`,
   },

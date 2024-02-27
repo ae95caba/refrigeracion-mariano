@@ -1,0 +1,42 @@
+{
+  "social": {
+    "instagram": {
+      "url": "https://www.instagram.com/",
+      "icon": "../images/social/instagram.svg"
+    },
+    "facebook": {
+      "url": "https://www.facebook.com/",
+      "icon": "../images/social/facebook.svg"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/",
+      "icon": "../images/social/linkedin.svg"
+    },
+    "twitter": {
+      "url": "https://www.twitter.com/",
+      "icon": "../images/social/twitter.svg"
+    }
+  },
+  "contact": {
+    "whatsapp": {
+      "icon": "../images/contact/whatsapp.svg",
+      "string": "+5491265800",
+      "url": "fasdfas"
+    },
+    "phone": {
+      "icon": "../images/contact/phone.svg",
+      "string": "+54911291855",
+      "url": "tel:+54911291855"
+    },
+    "location": {
+      "icon": "../images/contact/pin.svg",
+      "string": "Gallo 2145, Ciudad de Buenos Aires, Argentina",
+      "url": "https://www.google.com/maps"
+    },
+    "email": {
+      "icon": "../images/contact/email.svg",
+      "string": "jmyasociados@gmail.com",
+      "url": "mailto:jmyasociados@gmail.com"
+    }
+  }
+}
