@@ -37,14 +37,10 @@ export default function Gallery() {
           {galleryData.map(image => {
             console.log(galleryData.length)
             console.log(`my img is ${JSON.stringify(image)}`)
+            //this if fixes deployment on netlify
+            const img = getImage(image.path.childImageSharp.gatsbyImageData)
 
-            if (image.path) {
-              return (
-                <GatsbyImage
-                  image={getImage(image.path.childImageSharp.gatsbyImageData)}
-                />
-              )
-            }
+            return <GatsbyImage image={getImage(img)} alt={image.alt} />
 
             return null // If image doesn't have childImageSharp, return null
           })}
