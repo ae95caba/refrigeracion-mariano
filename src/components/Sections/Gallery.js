@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
 export default function Gallery() {
   const data = useStaticQuery(graphql`
-    query  {
+    query {
       gallery: file(relativePath: { eq: "gallerySection.json" }) {
         childDataJson {
           title
@@ -15,6 +15,7 @@ export default function Gallery() {
               childImageSharp {
                 gatsbyImageData
               }
+            }
           }
         }
       }
