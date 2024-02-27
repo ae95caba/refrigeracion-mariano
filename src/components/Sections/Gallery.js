@@ -38,7 +38,7 @@ export default function Gallery() {
             console.log(galleryData.length)
             console.log(`my img is ${JSON.stringify(image)}`)
 
-            if (image.path.childImageSharp) {
+            if (image.path) {
               return (
                 <GatsbyImage
                   image={getImage(image.path.childImageSharp.gatsbyImageData)}
