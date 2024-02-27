@@ -35,11 +35,18 @@ export default function Gallery() {
           fade={false}
         >
           {galleryData.map(image => {
-            return (
-              <GatsbyImage
-                image={getImage(image.path.childImageSharp.gatsbyImageData)}
-              />
-            )
+            console.log(galleryData.length)
+            console.log(`my img is ${JSON.stringify(image)}`)
+
+            if (image.path.childImageSharp) {
+              return (
+                <GatsbyImage
+                  image={getImage(image.path.childImageSharp.gatsbyImageData)}
+                />
+              )
+            }
+
+            return null // If image doesn't have childImageSharp, return null
           })}
         </SimpleSlider>
       </div>
