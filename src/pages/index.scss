@@ -206,7 +206,8 @@ section.hero {
     width: 100%;
     align-items: center;
     column-gap: 2rem;
-    row-gap: 3rem;
+
+    row-gap: 2rem;
     justify-content: space-evenly;
   }
   .container.first {
@@ -215,7 +216,7 @@ section.hero {
     flex-direction: column;
     align-items: flex-start;
 
-    gap: 2rem;
+    gap: 0.5rem;
     h3 {
       @include highlightedTitle();
     }
@@ -231,16 +232,17 @@ section.hero {
 
   .container.second {
     position: relative;
-    $leng: 3rem;
-    margin-left: $leng;
+    margin-left: 0px;
     .years {
       position: absolute;
-      width: 9rem;
-      box-shadow: $bold-shadow;
-      top: 40%;
-      left: -$leng;
-      background-color: $light-color;
+      width: 100%;
+      box-shadow: none;
+      bottom: 0px;
+      top: auto;
+      left: auto;
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 0.8rem;
+      color: $light-color;
 
       span {
         font-size: 2rem;
@@ -566,50 +568,10 @@ section.call-to-action {
 }
 
 @media screen and (max-width: 465px) {
-  section.hero {
-    .container.second {
-      .years {
-        position: static;
-        width: 100%;
-      }
-    }
-  }
   section.about {
     .content {
       p {
         column-count: 1;
-      }
-    }
-  }
-}
-
-//793 is when flex-wrap triggers
-
-@media screen and (max-width: 793px) {
-  section.hero {
-    .content {
-      .container.second {
-        margin-left: 0px !important;
-        .years {
-          position: absolute;
-          bottom: 0px;
-          top: auto;
-          left: auto;
-          width: 100%;
-          background-color: rgba(0, 0, 0, 0.6);
-          color: $light-color;
-          box-shadow: none;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 793px) and (max-height: 720px) {
-  section.hero {
-    .content {
-      row-gap: 2rem;
-      .container.first {
       }
     }
   }
