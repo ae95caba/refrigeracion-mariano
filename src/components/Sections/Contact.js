@@ -1,9 +1,9 @@
 import React, { useRef } from "react"
 import Section from "../Section"
 import { ReactSVG } from "react-svg"
-import user from "../../images/user.svg"
+import user from "../../images/contactSection/user.svg"
 import email from "../../images/contact/email.svg"
-import feather from "../../images/feather.svg"
+import feather from "../../images/contactSection/feather.svg"
 import Lottie from "lottie-react"
 import animationData from "../../animations/contact-me.json"
 export default function Contact() {

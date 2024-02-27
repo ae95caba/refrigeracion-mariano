@@ -1,11 +1,11 @@
 import React from "react"
 
 import { useContext, useRef } from "react"
-import Logo from "../images/GatsbyImages/Logo"
+import Logo from "../../images/GatsbyImages/Logo"
 
-import animationData from "../animations/hamburger-menu.json"
+import animationData from "../../animations/hamburger-menu.json"
 import Lottie from "lottie-react"
-import Tabs from "./Tabs"
+import Tabs from "../Tabs"
 
 export default function Header() {
   const hambugerAnimationRef = useRef(null)

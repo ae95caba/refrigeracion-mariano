@@ -8,7 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./Header"
+import Header from "./Sections/Header.js"
 import "./layout.scss"
 
 import Footer from "../components/Sections/Footer.js"
