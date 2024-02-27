@@ -1,6 +1,6 @@
 import React from "react"
 
-import { useContext, useRef } from "react"
+import { useContext, useRef, useEffect, useLayoutEffect } from "react"
 import Logo from "../../images/GatsbyImages/Logo"
 
 import animationData from "../../animations/hamburger-menu.json"
@@ -9,8 +9,41 @@ import Tabs from "../Tabs"
 
 export default function Header() {
   const hambugerAnimationRef = useRef(null)
+  const headerRef = useRef(null)
+  /*  useEffect(() => {
+    const headerElement = headerRef.current
+
+    const updateHeight = () => {
+      if (headerElement) {
+        console.log("Header Height:", headerElement.offsetHeight)
+      }
+    }
+
+    // Request an animation frame before updating the height
+    requestAnimationFrame(updateHeight)
+  }, []) // Empty dependency array ensures this effect runs only once on mount
+ */
+
+  useEffect(() => {
+    const headerElement = headerRef.current
+
+    const updateHeight = () => {
+      if (headerElement) {
+        console.log("Header Height:", headerElement.offsetHeight)
+        const root = document.documentElement
+        root.style.setProperty(
+          "--header-height",
+          `${headerElement.offsetHeight}px`
+        )
+      }
+    }
+
+    // Schedule the code to run after the layout step
+    setTimeout(updateHeight, 0)
+  }, []) // Empty dependency array ensures this effect runs only once on mount
+
   return (
-    <header>
+    <header ref={headerRef}>
       <div className="content">
         <Logo />
 

@@ -5,7 +5,12 @@ $medium-color: #4e535c;
 $universal-width: 1200px;
 $cool-shadow: 0 0 5px rgba(0, 0, 0, 0.502);
 $bold-shadow: 0 0 10px rgba(214, 181, 110, 0.902);
-$header-height: 68px;
+
+:root {
+  --header-height: 0px;
+}
+$header-height: var(--header-height);
+
 @mixin highlightedTitle() {
   font-size: 0.8rem;
   text-transform: uppercase;
