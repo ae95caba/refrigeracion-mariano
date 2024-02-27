@@ -33,12 +33,13 @@ export default function Team() {
     }
   `)
 
+  const title = data.team.childDataJson.title
   const teamData = data.team.childDataJson.team
   console.log(teamData)
 
   return (
-    <Section className={"team"} id="nuestro-equipo">
-      <h2>Nuestro Equipo</h2>
+    <Section className={"team"} id={`${title}`}>
+      <h2>{title}</h2>
       <ul>
         {teamData.map(member => {
           const image = getImage(member.image.childImageSharp.gatsbyImageData)

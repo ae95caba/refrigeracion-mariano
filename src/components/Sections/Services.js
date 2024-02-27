@@ -6,7 +6,7 @@ import servicesData from "../../data/servicesSection.json"
 
 export default function Services() {
   return (
-    <Section className={"services"} id={"areas-de-practica"}>
+    <Section className={"services"} id={servicesData.title}>
       <h2>{servicesData.title}</h2>
       {Object.keys(servicesData.categories).map(category => (
         <div className="container">

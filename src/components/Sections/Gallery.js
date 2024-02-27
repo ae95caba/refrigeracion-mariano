@@ -21,13 +21,11 @@ export default function Gallery() {
       }
     }
   `)
-
+  const title = data.gallery.childDataJson.title
   const galleryData = data.gallery.childDataJson.images
   return (
     <Section className="gallery">
-      {data.gallery.childDataJson.title && (
-        <h2>{data.gallery.childDataJson.title}</h2>
-      )}
+      {data.gallery.childDataJson.title && <h2>{title}</h2>}
 
       <div className="container">
         <SimpleSlider
